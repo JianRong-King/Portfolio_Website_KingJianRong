@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import gameplay_guitar_hero from "@/assets/gameplay_hero.png";
 import guitar_hero_pic from "@/assets/guitar_hero_pic2.png";
