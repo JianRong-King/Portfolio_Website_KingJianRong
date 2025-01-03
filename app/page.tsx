@@ -4,6 +4,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { Stack } from "@/components/Stack";
 import { Achievement } from "@/components/Achievement";
 import { Contact } from "@/components/Contact";
+import { LogoAnimation } from "@/components/LogoAnimation";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stack />
-
+      <LogoAnimation />
       <Portfolio />
       <Achievement />
       <Contact />

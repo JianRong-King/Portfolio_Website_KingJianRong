@@ -20,6 +20,13 @@ const projects = [
     description: "A 2D CLI Game",
     image: guitar_hero_pic,
   },
+  {
+    id: 3,
+    year: 2024,
+    title: "Static Factory",
+    description: "A 2D CLI Game",
+    image: guitar_hero_pic,
+  },
 ];
 
 export const Portfolio = () => {

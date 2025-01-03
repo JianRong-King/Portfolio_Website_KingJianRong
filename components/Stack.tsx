@@ -20,7 +20,9 @@ export const Stack = () => {
       id="TechStack"
     >
       <div className="max-w-[1200px] mx-auto px-4 text-center">
-        <h2 className="text-5xl text-gray-200 font-bold mb-4">Tech Stack</h2>
+        <h2 className="text-5xl text-gray-200 font-bold mb-4">
+          Tech Stack & <span className="text-purple-400">Tools</span>
+        </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
           {stackItems.map((item) => (
