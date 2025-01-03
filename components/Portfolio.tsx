@@ -27,13 +27,13 @@ export const Portfolio = () => {
 
   return (
     <section
-      id="portfolio"
+      id="Projects"
       className="py-32 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
         <div>
           <h2 className="text-5xl font-bold mb-10">
-            Selected <span className="text-gray-400">Project</span>
+            Selected <span className="text-purple-400">Project</span>
           </h2>
           {projects.map((project) => {
             return (
@@ -45,7 +45,7 @@ export const Portfolio = () => {
                 <p className="text-gray-400 text-lg mb-2">{project.year}</p>
 
                 <h3
-                  className={`text-3xl font-semibold group-hover:text-gray-400 transtion-colors ${
+                  className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors ${
                     selected.id === project.id ? "text-gray-100" : ""
                   } duration-300`}
                 >

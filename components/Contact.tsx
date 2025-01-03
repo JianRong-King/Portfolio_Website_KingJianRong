@@ -33,7 +33,7 @@ export const Contact = () => {
           >
             <div className="space-y-2">
               <p className="text-lg text-gray-300">Phone</p>
-              <p className="text-2xl font-semibold hover:text-gray-400 transition duration-300 flex items-center gap-2">
+              <p className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2">
                 +60-126214062
                 {/* add icon */}
               </p>
@@ -43,7 +43,7 @@ export const Contact = () => {
               <p className="text-lg text-gray-300">Email</p>
               <a
                 href="kingjianrong3249@gmail.com"
-                className="text-2xl font-semibold hover:text-gray-400 transition duration-300 flex items-center gap-2"
+                className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
               >
                 kingjianrong3249@gmail.com
                 {/* add icon */}
@@ -53,9 +53,12 @@ export const Contact = () => {
             <div className="space-y-2">
               <p className="text-lg text-gray-300">Active in</p>
               <address className="text-xl not-italic leading-relaxed">
-                Kuala Lumpur - Malaysia
-                <br />
-                Singapore - Singapore
+                <h4 className="hover:text-purple-400 m-0 p-0">
+                  Kuala Lumpur - Malaysia
+                </h4>
+                <h4 className="hover:text-purple-400 m-0 p-0">
+                  Singapore - Singapore
+                </h4>
                 {/* add icon */}
               </address>
             </div>
