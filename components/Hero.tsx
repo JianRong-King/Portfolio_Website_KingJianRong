@@ -21,6 +21,7 @@ export const Hero = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // to set radiant background with changing color
