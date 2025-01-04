@@ -12,6 +12,7 @@ import pytorch from "@/assets/pytorch.png";
 import tailwind from "@/assets/tailwind.png";
 import tensor from "@/assets/tensor.png";
 import python from "@/assets/python.svg";
+import framer from "@/assets/framer.png";
 
 const images = [
   { src: github, alt: "github" },
@@ -24,6 +25,7 @@ const images = [
   { src: tailwind, alt: "tailwind" },
   { src: tensor, alt: "tensor" },
   { src: python, alt: "python" },
+  { src: framer, alt: "framer" },
   { src: github, alt: "github" },
   { src: javascript, alt: "javascript" },
   { src: oracle, alt: "oracle" },
@@ -34,6 +36,7 @@ const images = [
   { src: tailwind, alt: "tailwind" },
   { src: tensor, alt: "tensor" },
   { src: python, alt: "python" },
+  { src: framer, alt: "framer" },
   { src: github, alt: "github" },
   { src: javascript, alt: "javascript" },
   { src: oracle, alt: "oracle" },
@@ -44,6 +47,7 @@ const images = [
   { src: tailwind, alt: "tailwind" },
   { src: tensor, alt: "tensor" },
   { src: python, alt: "python" },
+  { src: framer, alt: "framer" },
 ];
 
 export const LogoAnimation = () => {

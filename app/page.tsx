@@ -5,6 +5,7 @@ import { Stack } from "@/components/Stack";
 import { Achievement } from "@/components/Achievement";
 import { Contact } from "@/components/Contact";
 import { LogoAnimation } from "@/components/LogoAnimation";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Portfolio />
       <Achievement />
       <Contact />
+      <Footer />
     </>
   );
 }

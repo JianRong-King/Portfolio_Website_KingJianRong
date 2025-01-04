@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { TfiEmail } from "react-icons/tfi";
 
 export const Contact = () => {
   return (
@@ -32,11 +35,29 @@ export const Contact = () => {
             className="glass p-8 rounded-2xl space-y-8"
           >
             <div className="space-y-2">
-              <p className="text-lg text-gray-300">Phone</p>
-              <p className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2">
-                +60-126214062
-                {/* add icon */}
-              </p>
+              <p className="text-lg text-gray-300">LinkedIn</p>
+              <a
+                href="https://www.linkedin.com/in/jianrong-king"
+                className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={30} />
+                Jian Rong King
+              </a>
+            </div>
+
+            <div className="space-y-2">
+              <p className="text-lg text-gray-300">Github</p>
+              <a
+                href="https://github.com/JianRong-King"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
+              >
+                <FaGithub />
+                JianRong-King
+              </a>
             </div>
 
             <div className="space-y-2">
@@ -45,6 +66,7 @@ export const Contact = () => {
                 href="kingjianrong3249@gmail.com"
                 className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
               >
+                <TfiEmail />
                 kingjianrong3249@gmail.com
                 {/* add icon */}
               </a>
