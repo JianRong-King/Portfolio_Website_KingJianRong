@@ -1,32 +1,13 @@
 const Experience = [
   {
-    id: "1",
-    title: "High Achiever Scholarship",
-    description: "By A-levels results",
+    id: "-",
+    title: "Static Factory",
+    description:
+      "Inspired by the game lethal company. involves serval characters,  items, locations concepts and many more. Along with 3 contributors, we designed and implemented the code through meeting and UML graphs. Towards the design was with respect to future extendibility and obeying OOP design principle, SOLID & DRY etc. ",
   },
   {
-    id: "2",
+    id: "-",
     title: "Founder Chair Man Scholarship",
-    description: "With excellent extraciricular and academic result",
-  },
-  {
-    id: "3",
-    title: "District Basketball Champion",
-    description: "With excellent extraciricular and academic result",
-  },
-  {
-    id: "4",
-    title: "ISR",
-    description: "With excellent extraciricular and academic result",
-  },
-  {
-    id: "5",
-    title: "Prefect Head Of Disciplinary",
-    description: "With excellent extraciricular and academic result",
-  },
-  {
-    id: "6",
-    title: "lmao",
     description: "With excellent extraciricular and academic result",
   },
 ];
@@ -42,18 +23,16 @@ export const Achievement = () => {
         </div>
 
         <div className="md:w-3/4 ">
-          {Experience.map((event) => {
+          {Experience.map((event, idx) => {
             return (
               <div
-                key={event.id}
+                key={idx}
                 className="mb-16 flex items-start"
               >
-                <div className="text-purple-300 font-bold text-5xl mr-6">
-                  {event.id}
-                </div>
+                <div className="text-purple-300 font-bold text-5xl mr-6">-</div>
                 <div>
                   <h3 className="text-2xl font-bold mb-2">{event.title}</h3>
-                  <p>{event.description}</p>
+                  <p className="text-justify leading-7">{event.description}</p>
                 </div>
               </div>
             );

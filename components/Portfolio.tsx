@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import gameplay_guitar_hero from "@/assets/gameplay_hero.png";
 import guitar_hero_pic from "@/assets/guitar_hero_pic2.png";
 
 const projects = [
@@ -11,21 +10,29 @@ const projects = [
     year: 2024,
     title: "Guitar Hero",
     description: "A clone of the popular game Guitar Hero, JS & WebSocket API.",
-    image: gameplay_guitar_hero,
+    image: guitar_hero_pic,
+    Tools: ["Typescript", "RxJS"],
+    Skills: ["Functional & Responsive Programming"],
   },
   {
     id: 2,
     year: 2024,
     title: "Static Factory",
-    description: "A 2D CLI Game",
+    description:
+      "Inspired by the game lethal company. Involving serval characters, items, locations concepts and many more. Along with 3 contributors. Towards the design was with respect to future extendibility and obeying OOP design principle, SOLID & DRY etc.",
     image: guitar_hero_pic,
+    Tools: ["Java", "UML"],
+    Skills: ["OOP", "SOLID", "DRY"],
   },
+
   {
     id: 3,
     year: 2024,
-    title: "Static Factory",
-    description: "A 2D CLI Game",
+    title: "WorkWithMe",
+    description: "A Web Env that has all the tools you need to be productive!",
     image: guitar_hero_pic,
+    Tools: ["React", "Tailwindcss"],
+    Skills: [],
   },
 ];
 
@@ -47,23 +54,46 @@ export const Portfolio = () => {
               <div
                 key={project.id}
                 onClick={() => setSelected(project)}
-                className="cursor-pointer mb-8 group"
+                className={`cursor-pointer mb-8 group transtion-colors rounded-lg ${
+                  selected.id === project.id ? "bg-purple-400" : ""
+                } duration-400`}
               >
                 <p className="text-gray-400 text-lg mb-2">{project.year}</p>
 
-                <h3
-                  className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors ${
-                    selected.id === project.id ? "text-gray-100" : ""
-                  } duration-300`}
-                >
-                  {project.title}
-                </h3>
+                <div className="flex gap-3">
+                  <h3
+                    className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors ${
+                      selected.id === project.id ? "text-gray-100" : ""
+                    } duration-300`}
+                  >
+                    {project.title}
+                  </h3>
+                  <h4 className="flex gap-3 text-xs mt-1">
+                    {project.Tools.map((tool) => (
+                      <div
+                        key={tool}
+                        className="box-content"
+                      >
+                        <div className="p-1 border-2 rounded-full">{tool}</div>
+                      </div>
+                    ))}
+                    <div className="h-7 border-l-2 border-gray-400"></div>
+                    {project.Skills.map((skill) => (
+                      <div
+                        key={skill}
+                        className="box-content"
+                      >
+                        <div className="p-1 border-2 rounded-full">{skill}</div>
+                      </div>
+                    ))}
+                  </h4>
+                </div>
                 {selected.id === project.id && (
                   <div className="border-b-2 border-gray-200 my-4"></div>
                 )}
 
                 {selected.id === project.id && (
-                  <p className="text-gray-400 transition-all duration-500 ease-in-out">
+                  <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
                     {project.description}
                   </p>
                 )}
