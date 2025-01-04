@@ -54,9 +54,7 @@ export const Portfolio = () => {
               <div
                 key={project.id}
                 onClick={() => setSelected(project)}
-                className={`cursor-pointer mb-8 group transtion-colors rounded-lg ${
-                  selected.id === project.id ? "bg-purple-400" : ""
-                } duration-400`}
+                className="cursor-pointer mb-8 group "
               >
                 <p className="text-gray-400 text-lg mb-2">{project.year}</p>
 
