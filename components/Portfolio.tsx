@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import guitar_hero_pic from "@/assets/guitar_hero_pic2.png";
+import workwithme from "@/assets/workwithme.png";
+import parisUML from "@/assets/paris_db.png";
+import staticFactory from "@/assets/static_factory.png";
 
 const projects = [
   {
@@ -19,20 +22,30 @@ const projects = [
     year: 2024,
     title: "Static Factory",
     description:
-      "Inspired by the game lethal company. Involving serval characters, items, locations concepts and many more. Along with 3 contributors. Towards the design was with respect to future extendibility and obeying OOP design principle, SOLID & DRY etc.",
-    image: guitar_hero_pic,
+      "Inspired by the game lethal company. Involving serval characters, items, maps concepts (identified as symbols). Along with 3 contributors, achieved a design built with respect to future extendibility and obeying OOP design, SOLID & DRY principle. Used dependency injection to accommodate different functionality for a type class with different behaviour.",
+    image: staticFactory,
     Tools: ["Java", "UML"],
     Skills: ["OOP", "SOLID", "DRY"],
   },
 
   {
     id: 3,
-    year: 2024,
+    year: 2025,
     title: "WorkWithMe",
     description: "A Web Env that has all the tools you need to be productive!",
-    image: guitar_hero_pic,
+    image: workwithme,
     Tools: ["React", "Tailwindcss"],
     Skills: [],
+  },
+  {
+    id: 4,
+    year: 2024,
+    title: "Paris Transit Database System",
+    description:
+      "A database solution to computerize Paris Transit service records. Implemented a sets of relational (Oracle) and non-relational (MongoDB) queries. Application of MongoDB operations to produce outputs that meet client's requirements. Meeting the client's requirements and PL/SQL (Trigger & Procedure) code to enforce business rules.",
+    image: parisUML,
+    Tools: ["PL/SQL", "MongoDB"],
+    Skills: ["Trigger"],
   },
 ];
 
@@ -46,9 +59,15 @@ export const Portfolio = () => {
     >
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-5xl font-bold mb-10">
-            Selected <span className="text-purple-400">Project</span>
-          </h2>
+          <div className="flex">
+            <h2 className="text-5xl font-bold mb-10">
+              Selected <span className="text-purple-400">Project</span>
+            </h2>
+            <h3 className="content-end pb-10 pl-2 text-sm">
+              click on project title for info
+            </h3>
+          </div>
+
           {projects.map((project) => {
             return (
               <div
@@ -66,13 +85,15 @@ export const Portfolio = () => {
                   >
                     {project.title}
                   </h3>
-                  <h4 className="flex gap-3 text-xs mt-1">
+                  <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
                     {project.Tools.map((tool) => (
                       <div
                         key={tool}
                         className="box-content"
                       >
-                        <div className="p-1 border-2 rounded-full">{tool}</div>
+                        <div className="p-1 pr-1 border-2 rounded-full">
+                          {tool}
+                        </div>
                       </div>
                     ))}
                     <div className="h-7 border-l-2 border-gray-400"></div>

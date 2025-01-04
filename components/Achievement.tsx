@@ -1,9 +1,8 @@
 const Experience = [
   {
     id: "-",
-    title: "Static Factory",
-    description:
-      "Inspired by the game lethal company. involves serval characters,  items, locations concepts and many more. Along with 3 contributors, we designed and implemented the code through meeting and UML graphs. Towards the design was with respect to future extendibility and obeying OOP design principle, SOLID & DRY etc. ",
+    title: "High Achiever Award Scholarship",
+    description: "",
   },
   {
     id: "-",
@@ -18,7 +17,7 @@ export const Achievement = () => {
       <div className="container mx-auto flex flex-col md:flex-row">
         <div className="md:w-1/4 pr-8 mr-10 mb-12 md:mb-0">
           <h2 className="text-5xl text-purple-300 sticky top-20 font-serif font-bold">
-            Project Experience
+            Awards & Extra-Ciricular
           </h2>
         </div>
 
