@@ -2,15 +2,16 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+
 import { IoLogoNodejs } from "react-icons/io";
+import { FaJava } from "react-icons/fa";
 
 const stackItems = [
   { id: 1, name: "React", icon: FaReact, color: "#61DAFB" },
   { id: 2, name: "Node.js", icon: IoLogoNodejs, color: "#339933" },
   { id: 3, name: "Typescript", icon: SiTypescript, color: "#3178C6" },
   { id: 4, name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { id: 5, name: "Next.js", icon: TbBrandNextjs, color: "#000000" },
+  { id: 5, name: "Java", icon: FaJava, color: "white" },
 ];
 
 export const Stack = () => {
@@ -45,3 +46,8 @@ export const Stack = () => {
     </section>
   );
 };
+
+// todo complete porfolio details
+// check the everyday git commit
+
+// start prepare knowledge for edu env
