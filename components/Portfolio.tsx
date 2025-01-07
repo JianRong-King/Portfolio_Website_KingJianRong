@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import guitar_hero_pic from "@/assets/guitar_hero_pic2.png";
+
+import guitar_hero_pic from "@/assets/guitarhero.gif";
 import workwithme from "@/assets/workwithme.png";
 import parisUML from "@/assets/paris_db.png";
 import staticFactory from "@/assets/static_factory.png";
