@@ -46,8 +46,3 @@ export const Stack = () => {
     </section>
   );
 };
-
-// todo complete porfolio details
-// check the everyday git commit
-
-// start prepare knowledge for edu env

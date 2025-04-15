@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import guitar_hero_pic from "@/assets/guitarhero.gif";
-import workwithme from "@/assets/workwithme.png";
+import nutriTrack from "@/assets/NutriTrack.png";
 import parisUML from "@/assets/paris_db.png";
 import staticFactory from "@/assets/static_factory.png";
 
@@ -13,17 +13,18 @@ const projects = [
     id: 1,
     year: 2024,
     title: "Guitar Hero",
-    description: "A clone of the popular game Guitar Hero, JS & WebSocket API.",
+    description:
+      "Developed a web-based Guitar Hero–style game using Functional Reactive Programming in TypeScript, leveraging RxJS observables for real-time input, animation, and pure state management. Implemented a declarative game loop that reads note data from a CSV file and plays sound with Tone.js, accurately handling pitch, velocity, and timing.",
     image: guitar_hero_pic,
-    Tools: ["Typescript", "RxJS"],
-    Skills: ["Functional & Responsive Programming"],
+    Tools: ["Typescript", "Functional Programming"],
+    Skills: ["Web-Development"],
   },
   {
     id: 2,
     year: 2024,
     title: "Static Factory",
     description:
-      "Inspired by the game lethal company. Involving serval characters, items, maps concepts (identified as symbols). Along with 3 contributors, achieved a design built with respect to future extendibility and obeying OOP design, SOLID & DRY principle. Used dependency injection to accommodate different functionality for a type class with different behaviour.",
+      "Collaborated with a team of three to design and implement a 2D game featuring multiple characters, items, locations, and time-based gameplay elements. Applied OOP principles (SOLID, DRY) to ensure a scalable, maintainable architecture with emphasis on future extensibility. Reduced module dependencies through abstraction layers (interfaces, abstract classes) and implemented dependency injection to decouple object behaviors, enabling flexible modular functionality.",
     image: staticFactory,
     Tools: ["Java", "UML"],
     Skills: ["OOP", "SOLID", "DRY"],
@@ -32,11 +33,12 @@ const projects = [
   {
     id: 3,
     year: 2025,
-    title: "WorkWithMe",
-    description: "A Web Env that has all the tools you need to be productive!",
-    image: workwithme,
-    Tools: ["React", "Tailwindcss"],
-    Skills: [],
+    title: "NutriTrack",
+    description:
+      "Developed a multi-screen mobile application using Kotlin and Jetpack Compose, following a formal specification for a food tracking system. Implemented clean, declarative UI components and structured navigation between five core screens. Integrated CSV parsing to handle user authentication and dynamic data loading, including personalized food quality scores. Utilized SharedPreferences for local data persistence and managed real-time user input with dropdowns, checkboxes, and time pickers. Applied proper form validation and responsive design principles to ensure usability across devices. Demonstrated strong skills in state management, user experience design, and working with structured data formats in Android development.",
+    image: nutriTrack,
+    Tools: ["Kotlin", "JetPack Compose UI Styling"],
+    Skills: ["Mobile App Development"],
   },
   {
     id: 4,
