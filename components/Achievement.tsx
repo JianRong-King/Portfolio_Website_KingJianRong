@@ -2,12 +2,13 @@ const Experience = [
   {
     id: "-",
     title: "High Achiever Award Scholarship",
-    description: "",
+    description: "Provided by Monash University Malaysia",
   },
   {
     id: "-",
     title: "Founder Chair Man Scholarship",
-    description: "With excellent extraciricular and academic result",
+    description:
+      "Provided by Dato Steve Chong - Austin Height International School",
   },
 ];
 
