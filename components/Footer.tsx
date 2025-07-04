@@ -38,7 +38,7 @@ export const Footer = () => {
       <div className="mx-9 px-10 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left-aligned content */}
         <div className="ml-1 px-10 text-left">
-          <p>© 2024. All rights reserved.</p>
+          <p>© 2025. All rights reserved.</p>
         </div>
 
         {/* Right-aligned content */}
