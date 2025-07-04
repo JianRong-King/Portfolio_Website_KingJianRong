@@ -35,9 +35,9 @@ const projects = [
     year: 2025,
     title: "NutriTrack",
     description:
-      "Developed a multi-screen mobile application using Kotlin and Jetpack Compose, following a formal specification for a food tracking system. Implemented clean, declarative UI components and structured navigation between five core screens. Integrated CSV parsing to handle user authentication and dynamic data loading, including personalized food quality scores. Utilized SharedPreferences for local data persistence and managed real-time user input with dropdowns, checkboxes, and time pickers. Applied proper form validation and responsive design principles to ensure usability across devices. Demonstrated strong skills in state management, user experience design, and working with structured data formats in Android development.",
+      "NutriTrack Pro is a personalized nutrition tracking Android app built with Kotlin and MVVM architecture. Migrated CSV data into a Room database, implemented multi-user login/logout with account claiming, and integrated the FruityVice API for real-time fruit nutrition data. The app also uses the Gemini GenAI API to generate personalized food tips, storing responses in a dedicated database table. Key features include a NutriCoach insights screen, a settings screen with user and admin views, a clinician dashboard showing gender-based analytics and AI-generated dietary patterns, and a real-time leaderboard that ranks users by nutrition scores. Technologies used include Room, Retrofit, Coroutines, LiveData, and GenAI.",
     image: nutriTrack,
-    Tools: ["Kotlin", "JetPack Compose UI Styling"],
+    Tools: ["Kotlin", "RoomDB", "MVVM", "GenAI"],
     Skills: ["Mobile App Development"],
   },
   {
