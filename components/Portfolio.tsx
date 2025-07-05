@@ -18,6 +18,9 @@ import geminiApi_logo from "@/assets/Gemini_logo.png";
 import mongoDb from "@/assets/mongo_db.png";
 import OracleDb from "@/assets/oracle_db_logo.png";
 
+import { FaGithub } from "react-icons/fa";
+import { span } from "framer-motion/client";
+
 const projects = [
   {
     id: 1,
@@ -26,8 +29,8 @@ const projects = [
     description:
       "Developed a web-based Guitar Hero–style game using Functional Reactive Programming in TypeScript, leveraging RxJS observables for real-time input, animation, and pure state management. Implemented a declarative game loop that reads note data from a CSV file and plays sound with Tone.js, accurately handling pitch, velocity, and timing.",
     image: guitar_hero_pic,
-    Tools: ["Typescript", "Functional Programming"],
-    Skills: ["Web-Development"],
+    Tools: [],
+    Skills: ["Web-Development", "Functional Programming"],
   },
   {
     id: 2,
@@ -36,7 +39,7 @@ const projects = [
     description:
       "Developed a complete desktop application of the Santorini board game entirely from scratch. Built by using UML class diagrams and CRC cards based on user stories and built the game engine step-by-step using object-oriented principles. Implemented complete gameplay logic including player turns, movement, and building mechanics, with a functional GUI built using Java Swing.",
     image: staticFactory,
-    Tools: ["Java", "UML"],
+    Tools: [],
     Skills: ["OOP", "Design Patterns"],
   },
 
@@ -47,7 +50,7 @@ const projects = [
     description:
       "NutriTrack Pro is a personalized nutrition tracking Android app built with Kotlin and MVVM architecture. Migrated CSV data into a Room database, implemented multi-user login/logout with account claiming, and integrated the FruityVice API for real-time fruit nutrition data. The app also uses the Gemini GenAI API to generate personalized food tips, storing responses in a dedicated database table. Key features include a NutriCoach insights screen, a settings screen with user and admin views, a clinician dashboard showing gender-based analytics and AI-generated dietary patterns, and a real-time leaderboard that ranks users by nutrition scores. Technologies used include Room, Retrofit, Coroutines, LiveData, and GenAI.",
     image: nutriTrack,
-    Tools: ["Kotlin", "RoomDB", "MVVM", "GenAI"],
+    Tools: [],
     Skills: ["Mobile App Development"],
   },
   {
@@ -113,10 +116,24 @@ export const Portfolio = () => {
                 </div>
 
                 <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
-                  {projects[0].description}
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Developed a web-based Guitar Hero–style game using
+                      Functional Reactive Programming in TypeScript
+                    </li>
+                    <li>
+                      Leveraging RxJS observables for real-time input,
+                      animation, and pure state management
+                    </li>
+                    <li>
+                      Implemented a declarative game loop that reads note data
+                      from a CSV file and plays sound with Tone.js, accurately
+                      handling pitch, velocity, and timing
+                    </li>
+                  </ul>
                 </p>
 
-                <div className="mt-4">
+                <div className="mt-4 ml-2">
                   <div className="flex gap-4">
                     {/* TypeScript Logo */}
                     <div className="w-1/5 flex flex-col items-center">
@@ -191,11 +208,28 @@ export const Portfolio = () => {
                 </div>
 
                 <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
-                  {projects[1].description}
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Designed the system architecture using UML class diagrams
+                      and CRC cards derived from user stories, then
+                      incrementally built the game engine using object-oriented
+                      programming principles.
+                    </li>
+                    <li>
+                      Applied SOLID design principles and used techniques such
+                      as encapsulation, inheritance, and abstraction to ensure
+                      modularity and code reusability.
+                    </li>
+                    <li>
+                      Integrated a responsive GUI using Java Swing, and followed
+                      scalable design with the use of relevant design patterns
+                      (e.g., Factory, Singleton) to manage game components.
+                    </li>
+                  </ul>
                 </p>
 
-                <div className="mt-4">
-                  <div className="flex gap-4">
+                <div className="mt-4 ml-2">
+                  <div className="flex gap-4 items-center">
                     {/* Java Logo */}
                     <div className="w-1/5 flex flex-col items-center">
                       <Image
@@ -209,16 +243,16 @@ export const Portfolio = () => {
                       <p className="text-center mt-2">Java</p>
                     </div>
 
-                    {/* RxJS Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
-                      <Image
-                        src={rxJsLogo}
-                        alt="RxJs_logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
-                      />
-                      <p className="text-center mt-2">RxJs</p>
+                    <div className="">
+                      <a
+                        href="https://github.com/JianRong-King/Santorini"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                      >
+                        <span>Git Repo</span>
+                        <FaGithub size={40} />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -234,16 +268,15 @@ export const Portfolio = () => {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
-          <div className="items-center justify-center mr-4 pl-4 pt-4">
-            <div className="flex ">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl">
+          {/* Left Section (smaller) */}
+          <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
+            <div className="flex">
               <div>
-                <p className="text-gray-400 text-lg mb-2">{projects[1].year}</p>
+                <p className="text-gray-400 text-lg mb-2">{projects[2].year}</p>
 
                 <div className="flex gap-3 mb-2">
-                  <h3
-                    className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors`}
-                  >
+                  <h3 className="text-3xl font-semibold group-hover:text-purple-400 transition-colors">
                     {projects[2].title}
                   </h3>
                   <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
@@ -269,11 +302,33 @@ export const Portfolio = () => {
                   </h4>
                 </div>
 
-                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
-                  {projects[1].description}
+                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out max-w-1xl mx-auto">
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Personalized AI powered nutrition tracking Android app
+                      built with Kotlin and MVVM architecture.
+                    </li>
+                    <li>
+                      Migrated CSV data into a Room database, implemented
+                      multi-user login/logout with account claiming.
+                    </li>
+                    <li>
+                      Integrated Gemini GenAI API to generate personalized food
+                      tips along with FruityVice API for real-time fruit
+                      nutrition data and stores them in Room Database
+                    </li>
+                    <li>
+                      Clinician dashboard showing gender-based analytics and
+                      AI-generated dietary patterns.
+                    </li>
+                    <li>
+                      Real-time leaderboard that ranks users by nutrition
+                      scores.
+                    </li>
+                  </ul>
                 </p>
 
-                <div className="mt-4">
+                <div className="mt-4 ml-2 mb-4">
                   <div className="flex gap-4">
                     {/* Kotlin Logo */}
                     <div className="w-1/5 flex flex-col items-center">
@@ -287,11 +342,11 @@ export const Portfolio = () => {
                       <p className="text-center mt-2">Kotlin</p>
                     </div>
 
-                    {/* RxJS Logo */}
+                    {/* Room DB Logo */}
                     <div className="w-1/5 flex flex-col items-center">
                       <Image
                         src={roomDb}
-                        alt="room Db logo"
+                        alt="Room DB Logo"
                         className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
                         width={90}
                         height={90}
@@ -299,28 +354,45 @@ export const Portfolio = () => {
                       <p className="text-center mt-2">RoomDb</p>
                     </div>
 
+                    {/* Gemini API Logo */}
                     <div className="w-1/5 flex flex-col items-center">
                       <Image
                         src={geminiApi_logo}
-                        alt="geminiApi logo"
+                        alt="Gemini API Logo"
                         className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
                         width={90}
                         height={90}
                       />
                       <p className="text-center mt-2">Gemini API</p>
                     </div>
+
+                    <div>
+                      <a
+                        href="https://github.com/JianRong-King/NutriTrack"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                      >
+                        <span>Git Repo</span>
+                        <FaGithub size={40} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <Image
-            src={projects[2].image}
-            alt={projects[2].title}
-            className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-            width={800}
-            height={450}
-          />
+
+          {/* Right Section (Image) */}
+          <div className="lg:col-span-2 mt-14">
+            <Image
+              src={projects[2].image}
+              alt={projects[2].title}
+              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+              width={2158}
+              height={766}
+            />
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
@@ -384,7 +456,19 @@ export const Portfolio = () => {
                         width={90}
                         height={90}
                       />
-                      <p className="text-center mt-2">Gemini API</p>
+                      <p className="text-center mt-2">mongoDb</p>
+                    </div>
+
+                    <div className="">
+                      <a
+                        href="https://github.com/JianRong-King/Paris-Arrow-Transit-Database-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                      >
+                        <span>Git Repo</span>
+                        <FaGithub size={40} />
+                      </a>
                     </div>
                   </div>
                 </div>
