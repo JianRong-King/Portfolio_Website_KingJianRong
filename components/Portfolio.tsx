@@ -5,7 +5,6 @@ import Image from "next/image";
 import guitar_hero_pic from "@/assets/guitarhero.gif";
 import nutriTrack from "@/assets/NutriTrack.png";
 import parisUML from "@/assets/paris_db.png";
-import staticFactory from "@/assets/static_factory.png";
 import santorini from "@/assets/Santorni_png.png";
 
 import javaLogo from "@/assets/java_logo.png";
@@ -20,7 +19,6 @@ import mongoDb from "@/assets/mongo_db.png";
 import OracleDb from "@/assets/oracle_db_logo.png";
 
 import { FaGithub } from "react-icons/fa";
-import { span } from "framer-motion/client";
 
 const projects = [
   {
