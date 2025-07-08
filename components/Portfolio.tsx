@@ -6,6 +6,7 @@ import guitar_hero_pic from "@/assets/guitarhero.gif";
 import nutriTrack from "@/assets/NutriTrack.png";
 import parisUML from "@/assets/paris_db.png";
 import staticFactory from "@/assets/static_factory.png";
+import santorini from "@/assets/Santorni_png.png";
 
 import javaLogo from "@/assets/java_logo.png";
 import typeScriptLogo from "@/assets/typescript.png";
@@ -38,7 +39,7 @@ const projects = [
     title: "Santorini Game",
     description:
       "Developed a complete desktop application of the Santorini board game entirely from scratch. Built by using UML class diagrams and CRC cards based on user stories and built the game engine step-by-step using object-oriented principles. Implemented complete gameplay logic including player turns, movement, and building mechanics, with a functional GUI built using Java Swing.",
-    image: staticFactory,
+    image: santorini,
     Tools: [],
     Skills: ["OOP", "Design Patterns"],
   },
@@ -80,7 +81,134 @@ export const Portfolio = () => {
       <div className="space-y-20 py-4">
         {/* Project section div */}
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl">
+          {/* Left Section (smaller) */}
+          <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
+            <div className="flex">
+              <div>
+                <p className="text-gray-400 text-lg mb-2">{projects[2].year}</p>
+
+                <div className="flex gap-3 mb-2">
+                  <h3 className="text-3xl font-semibold group-hover:text-purple-400 transition-colors">
+                    {projects[2].title}
+                  </h3>
+                  <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
+                    {projects[2].Tools.map((tool) => (
+                      <div
+                        key={tool}
+                        className="box-content"
+                      >
+                        <div className="p-1 pr-1 border-2 rounded-full">
+                          {tool}
+                        </div>
+                      </div>
+                    ))}
+                    <div className="h-7 border-l-2 border-gray-400"></div>
+                    {projects[2].Skills.map((skill) => (
+                      <div
+                        key={skill}
+                        className="box-content"
+                      >
+                        <div className="p-1 border-2 rounded-full">{skill}</div>
+                      </div>
+                    ))}
+                  </h4>
+                </div>
+
+                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out max-w-1xl mx-auto">
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Personalized AI powered nutrition tracking Android app
+                      built with Kotlin and MVVM architecture.
+                    </li>
+                    <li>
+                      Migrated CSV data into a Room database, implemented
+                      multi-user login/logout with account claiming.
+                    </li>
+                    <li>
+                      Integrated Gemini GenAI API to generate personalized food
+                      tips along with FruityVice API for real-time fruit
+                      nutrition data and stores them in Room Database
+                    </li>
+                    <li>
+                      Clinician dashboard showing gender-based analytics and
+                      AI-generated dietary patterns.
+                    </li>
+                    <li>
+                      Real-time leaderboard that ranks users by nutrition
+                      scores.
+                    </li>
+                  </ul>
+                </p>
+
+                <div className="mt-4 ml-2 mb-4">
+                  <div className="flex gap-4">
+                    {/* Kotlin Logo */}
+                    <div className="w-1/5 flex flex-col items-center">
+                      <Image
+                        src={kotlinLogo}
+                        alt="Kotlin Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+                        width={90}
+                        height={90}
+                      />
+                      <p className="text-center mt-2">Kotlin</p>
+                    </div>
+
+                    {/* Room DB Logo */}
+                    <div className="w-1/5 flex flex-col items-center">
+                      <Image
+                        src={roomDb}
+                        alt="Room DB Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+                        width={90}
+                        height={90}
+                      />
+                      <p className="text-center mt-2">RoomDb</p>
+                    </div>
+
+                    {/* Gemini API Logo */}
+                    <div className="w-1/5 flex flex-col items-center">
+                      <Image
+                        src={geminiApi_logo}
+                        alt="Gemini API Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+                        width={90}
+                        height={90}
+                      />
+                      <p className="text-center mt-2">Gemini API</p>
+                    </div>
+
+                    <div>
+                      <a
+                        href="https://github.com/JianRong-King/NutriTrack"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                      >
+                        <span>Git Repo</span>
+                        <FaGithub size={40} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section (Image) */}
+          <div className="lg:col-span-2 mt-14">
+            <Image
+              src={projects[2].image}
+              alt={projects[2].title}
+              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+              width={2158}
+              height={766}
+            />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center">
           <div className="items-center justify-center mr-4 pl-4 pt-4">
             <div className="flex ">
               <div>
@@ -266,133 +394,6 @@ export const Portfolio = () => {
             width={800}
             height={450}
           />
-        </div>
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl">
-          {/* Left Section (smaller) */}
-          <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
-            <div className="flex">
-              <div>
-                <p className="text-gray-400 text-lg mb-2">{projects[2].year}</p>
-
-                <div className="flex gap-3 mb-2">
-                  <h3 className="text-3xl font-semibold group-hover:text-purple-400 transition-colors">
-                    {projects[2].title}
-                  </h3>
-                  <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
-                    {projects[2].Tools.map((tool) => (
-                      <div
-                        key={tool}
-                        className="box-content"
-                      >
-                        <div className="p-1 pr-1 border-2 rounded-full">
-                          {tool}
-                        </div>
-                      </div>
-                    ))}
-                    <div className="h-7 border-l-2 border-gray-400"></div>
-                    {projects[2].Skills.map((skill) => (
-                      <div
-                        key={skill}
-                        className="box-content"
-                      >
-                        <div className="p-1 border-2 rounded-full">{skill}</div>
-                      </div>
-                    ))}
-                  </h4>
-                </div>
-
-                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out max-w-1xl mx-auto">
-                  <ul className="list-disc ml-6">
-                    <li>
-                      Personalized AI powered nutrition tracking Android app
-                      built with Kotlin and MVVM architecture.
-                    </li>
-                    <li>
-                      Migrated CSV data into a Room database, implemented
-                      multi-user login/logout with account claiming.
-                    </li>
-                    <li>
-                      Integrated Gemini GenAI API to generate personalized food
-                      tips along with FruityVice API for real-time fruit
-                      nutrition data and stores them in Room Database
-                    </li>
-                    <li>
-                      Clinician dashboard showing gender-based analytics and
-                      AI-generated dietary patterns.
-                    </li>
-                    <li>
-                      Real-time leaderboard that ranks users by nutrition
-                      scores.
-                    </li>
-                  </ul>
-                </p>
-
-                <div className="mt-4 ml-2 mb-4">
-                  <div className="flex gap-4">
-                    {/* Kotlin Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
-                      <Image
-                        src={kotlinLogo}
-                        alt="Kotlin Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
-                      />
-                      <p className="text-center mt-2">Kotlin</p>
-                    </div>
-
-                    {/* Room DB Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
-                      <Image
-                        src={roomDb}
-                        alt="Room DB Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
-                      />
-                      <p className="text-center mt-2">RoomDb</p>
-                    </div>
-
-                    {/* Gemini API Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
-                      <Image
-                        src={geminiApi_logo}
-                        alt="Gemini API Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
-                      />
-                      <p className="text-center mt-2">Gemini API</p>
-                    </div>
-
-                    <div>
-                      <a
-                        href="https://github.com/JianRong-King/NutriTrack"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-                      >
-                        <span>Git Repo</span>
-                        <FaGithub size={40} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Section (Image) */}
-          <div className="lg:col-span-2 mt-14">
-            <Image
-              src={projects[2].image}
-              alt={projects[2].title}
-              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-              width={2158}
-              height={766}
-            />
-          </div>
         </div>
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
