@@ -20,6 +20,8 @@ import OracleDb from "@/assets/oracle_db_logo.png";
 
 import { FaGithub } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
 const projects = [
   {
     id: 1,
@@ -79,7 +81,12 @@ export const Portfolio = () => {
       <div className="space-y-20 py-4">
         {/* Project section div */}
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl">
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           {/* Left Section (smaller) */}
           <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
             <div className="flex">
@@ -204,9 +211,14 @@ export const Portfolio = () => {
               height={766}
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center">
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="items-center justify-center mr-4 pl-4 pt-4">
             <div className="flex ">
               <div>
@@ -214,7 +226,7 @@ export const Portfolio = () => {
 
                 <div className="flex gap-3 mb-2">
                   <h3
-                    className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors`}
+                    className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors`}
                   >
                     {projects[0].title}
                   </h3>
@@ -296,9 +308,14 @@ export const Portfolio = () => {
             width={800}
             height={450}
           />
-        </div>
+        </motion.div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="items-center justify-center mr-4 pl-4 pt-4">
             <div className="flex ">
               <div>
@@ -306,7 +323,7 @@ export const Portfolio = () => {
 
                 <div className="flex gap-3 mb-2">
                   <h3
-                    className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors`}
+                    className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors`}
                   >
                     {projects[1].title}
                   </h3>
@@ -392,9 +409,14 @@ export const Portfolio = () => {
             width={800}
             height={450}
           />
-        </div>
+        </motion.div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl">
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="items-center justify-center mr-4 pl-4 pt-4">
             <div className="flex ">
               <div>
@@ -402,7 +424,7 @@ export const Portfolio = () => {
 
                 <div className="flex gap-3 mb-2">
                   <h3
-                    className={`text-3xl font-semibold group-hover:text-purple-400 transtion-colors`}
+                    className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors`}
                   >
                     {projects[3].title}
                   </h3>
@@ -481,7 +503,7 @@ export const Portfolio = () => {
             width={800}
             height={450}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
