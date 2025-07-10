@@ -7,18 +7,27 @@ import nutriTrack from "@/assets/NutriTrack.png";
 import parisUML from "@/assets/paris_db.png";
 import santorini from "@/assets/Santorni_png.png";
 
-import javaLogo from "@/assets/java_logo.png";
 import typeScriptLogo from "@/assets/typescript.png";
 import rxJsLogo from "@/assets/RxJs_Logo.png";
+import javaSwing from "@/assets/java_swing.png";
+
+import porfolio_img from "@/assets/porfolio_img.png";
 
 import kotlinLogo from "@/assets/Kotlin_logo.jpg";
 import roomDb from "@/assets/RoomDb.jpeg";
 import geminiApi_logo from "@/assets/Gemini_logo.png";
 
+import tailwindCss_logo from "@/assets/tailwind_css_logo.png";
+import react_logo from "@/assets/React_logo.png";
+import framer_motion_logo from "@/assets/framer-motion.png";
+
 import mongoDb from "@/assets/mongo_db.png";
 import OracleDb from "@/assets/oracle_db_logo.png";
 
 import { FaGithub } from "react-icons/fa";
+import cssLogo from "@/assets/css-3-seeklogo.png";
+import htmlLogo from "@/assets/html_logo.png";
+import nextJsLogo from "@/assets/nextjs_logo.png";
 
 import { motion } from "framer-motion";
 
@@ -31,7 +40,7 @@ const projects = [
       "Developed a web-based Guitar Hero–style game using Functional Reactive Programming in TypeScript, leveraging RxJS observables for real-time input, animation, and pure state management. Implemented a declarative game loop that reads note data from a CSV file and plays sound with Tone.js, accurately handling pitch, velocity, and timing.",
     image: guitar_hero_pic,
     Tools: [],
-    Skills: ["Web-Development", "Functional Programming"],
+    Skills: ["Web-Development"],
   },
   {
     id: 2,
@@ -64,6 +73,16 @@ const projects = [
     Tools: ["PL/SQL", "MongoDB"],
     Skills: ["Trigger"],
   },
+  {
+    id: 5,
+    year: 2025,
+    title: "Porfolio Website",
+    description:
+      "Developed a responsive and interactive portfolio using Next.js, TypeScript, and Tailwind CSS, showcasing personal projects, technical skills, and experience. ",
+    image: porfolio_img,
+    Tools: [],
+    Skills: [],
+  },
 ];
 
 export const Portfolio = () => {
@@ -73,7 +92,7 @@ export const Portfolio = () => {
       className="py-28 text-white"
     >
       <div className="flex max-w-7xl mx-auto px-2">
-        <h2 className="text-5xl font-bold mb-10">
+        <h2 className="text-5xl font-bold mb-4">
           <span className="text-purple-400">Projects</span>
         </h2>
       </div>
@@ -147,54 +166,55 @@ export const Portfolio = () => {
                 </p>
 
                 <div className="mt-4 ml-2 mb-4">
-                  <div className="flex gap-4">
+                  <div className="grid grid-cols-3 gap-4 items-center justify-items-center mt-6 mb-6">
                     {/* Kotlin Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
                         src={kotlinLogo}
                         alt="Kotlin Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-                      <p className="text-center mt-2">Kotlin</p>
+                      <p className="text-center mt-2 text-sm">Kotlin</p>
                     </div>
 
                     {/* Room DB Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
                         src={roomDb}
                         alt="Room DB Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-                      <p className="text-center mt-2">RoomDb</p>
+                      <p className="text-center mt-2 text-sm">RoomDb</p>
                     </div>
 
                     {/* Gemini API Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
                         src={geminiApi_logo}
                         alt="Gemini API Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-                      <p className="text-center mt-2">Gemini API</p>
+                      <p className="text-center mt-2 text-sm">Gemini API</p>
                     </div>
+                  </div>
 
-                    <div>
-                      <a
-                        href="https://github.com/JianRong-King/NutriTrack"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-                      >
-                        <span>Git Repo</span>
-                        <FaGithub size={40} />
-                      </a>
-                    </div>
+                  {/* GitHub Link */}
+                  <div className="flex flex-col items-center w-full">
+                    <a
+                      href="https://github.com/JianRong-King/NutriTrack"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition mb-2"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -214,20 +234,152 @@ export const Portfolio = () => {
         </motion.div>
 
         <motion.div
-          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center"
+          className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl flex-col justify-start items-center h-full"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="items-center justify-center mr-4 pl-4 pt-4">
-            <div className="flex ">
+          {/* Left Section (smaller) */}
+          <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
+            <div className="flex">
+              <div>
+                <p className="text-gray-400 text-lg mb-2">{projects[4].year}</p>
+
+                <div className="flex gap-3 mb-2">
+                  <h3 className="text-3xl font-semibold group-hover:text-purple-400 transition-colors">
+                    {projects[4].title}
+                  </h3>
+                  <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
+                    {projects[4].Tools.map((tool) => (
+                      <div
+                        key={tool}
+                        className="box-content"
+                      >
+                        <div className="p-1 pr-1 border-2 rounded-full">
+                          {tool}
+                        </div>
+                      </div>
+                    ))}
+                    <div className="h-7 border-l-2 border-gray-400"></div>
+                    {projects[4].Skills.map((skill) => (
+                      <div
+                        key={skill}
+                        className="box-content"
+                      >
+                        <div className="p-1 border-2 rounded-full">{skill}</div>
+                      </div>
+                    ))}
+                  </h4>
+                </div>
+
+                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out max-w-1xl mx-auto">
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Developed a responsive and interactive portfolio using
+                      Next.js, TypeScript, and Tailwind CSS, showcasing personal
+                      projects, technical skills, and experience.
+                    </li>
+                    <li>
+                      Implemented smooth transition animations for each section
+                      and designed a clean, scrollable layout to clearly display
+                      tech stack and project showcases.
+                    </li>
+                  </ul>
+                </p>
+
+                <div className="mt-4 ml-2 mb-4">
+                  <div className="grid grid-cols-4 gap-4 items-center justify-items-center mt-6 mb-6">
+                    {/* Kotlin Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={nextJsLogo}
+                        alt="nextJsLogo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">Next.js</p>
+                    </div>
+
+                    {/* Room DB Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={react_logo}
+                        alt="Room DB Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">React</p>
+                    </div>
+
+                    {/* Gemini API Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={tailwindCss_logo}
+                        alt="Gemini API Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">TailWindCSS</p>
+                    </div>
+
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={framer_motion_logo}
+                        alt="Gemini API Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">Framer motion</p>
+                    </div>
+                  </div>
+
+                  {/* GitHub Link */}
+                  <div className="flex flex-col items-center w-full">
+                    <a
+                      href="https://github.com/JianRong-King/Portfolio_kjr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition mb-2"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section (Image) */}
+          <div className="lg:col-span-2">
+            <Image
+              src={projects[4].image}
+              alt={projects[4].title}
+              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+              width={2158}
+              height={766}
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4 bg-slate-900 rounded-2xl flex-col justify-start items-center h-full"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {/* Left Section (smaller) */}
+          <div className="lg:col-span-1 items-center justify-center mr-4 pl-4 pt-4">
+            <div className="flex">
               <div>
                 <p className="text-gray-400 text-lg mb-2">{projects[0].year}</p>
 
                 <div className="flex gap-3 mb-2">
-                  <h3
-                    className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors`}
-                  >
+                  <h3 className="text-3xl font-semibold group-hover:text-purple-400 transition-colors">
                     {projects[0].title}
                   </h3>
                   <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
@@ -253,10 +405,10 @@ export const Portfolio = () => {
                   </h4>
                 </div>
 
-                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
+                <p className="leading-7 text-gray-400 transition-all duration-500 ease-in-out max-w-1xl mx-auto">
                   <ul className="list-disc ml-6">
                     <li>
-                      Developed a web-based Guitar Hero–style game using
+                      Developed a web-based Guitar Hero style game using
                       Functional Reactive Programming in TypeScript
                     </li>
                     <li>
@@ -271,43 +423,84 @@ export const Portfolio = () => {
                   </ul>
                 </p>
 
-                <div className="mt-4 ml-2">
-                  <div className="flex gap-4">
+                <div className="mt-6 ml-2 mb-6">
+                  <div className="grid grid-cols-4 gap-4 items-center justify-items-center">
+                    {/* HTML Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={htmlLogo}
+                        alt="HTML Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">HTML</p>
+                    </div>
+
+                    {/* CSS Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={cssLogo}
+                        alt="CSS Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">CSS</p>
+                    </div>
+
                     {/* TypeScript Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
                         src={typeScriptLogo}
-                        alt="TS_logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        alt="TypeScript Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-                      <p className="text-center mt-2">TypeScript</p>
+                      <p className="text-center mt-2 text-sm">TypeScript</p>
                     </div>
 
                     {/* RxJS Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
                         src={rxJsLogo}
-                        alt="RxJs_logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        alt="RxJS Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-                      <p className="text-center mt-2">RxJs</p>
+                      <p className="text-center mt-2 text-sm">RxJS</p>
                     </div>
                   </div>
+
+                  {/* GitHub Link */}
+                  {/* <div className="mt-6 flex flex-col items-center w-full">
+                    <a
+                      href="https://github.com/JianRong-King/NutriTrack"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
-          <Image
-            src={projects[0].image}
-            alt={projects[0].title}
-            className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-            width={800}
-            height={450}
-          />
+
+          {/* Right Section (Image) */}
+          <div className="lg:col-span-2 ">
+            <Image
+              src={projects[0].image}
+              alt={projects[0].title}
+              className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+              width={2158}
+              height={766}
+            />
+          </div>
         </motion.div>
 
         <motion.div
@@ -372,31 +565,43 @@ export const Portfolio = () => {
                 </p>
 
                 <div className="mt-4 ml-2">
-                  <div className="flex gap-4 items-center">
+                  <div className="grid grid-cols-2 gap-4 items-center justify-items-center mb-4">
                     {/* Java Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center w-full">
                       <Image
-                        src={javaLogo}
+                        src={javaSwing}
                         alt="Java Logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
                       />
-
-                      <p className="text-center mt-2">Java</p>
+                      <p className="text-center mt-2 text-sm">Java</p>
                     </div>
 
-                    <div className="">
-                      <a
-                        href="https://github.com/JianRong-King/Santorini"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-                      >
-                        <span>Git Repo</span>
-                        <FaGithub size={40} />
-                      </a>
+                    {/* Java Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={javaSwing}
+                        alt="Java Swing Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">Java Swing</p>
                     </div>
+                  </div>
+
+                  {/* GitHub Link */}
+                  <div className="flex flex-col items-center w-full mb-8">
+                    <a
+                      href="https://github.com/JianRong-King/Santorini"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -456,41 +661,43 @@ export const Portfolio = () => {
                 </p>
 
                 <div className="mt-4">
-                  <div className="flex gap-4">
+                  <div className="grid grid-cols-2 gap-4 items-center justify-items-center">
                     {/* OracleDb Logo */}
-                    <div className="w-1/5 flex flex-col items-center">
+                    <div className="flex flex-col items-center">
                       <Image
                         src={OracleDb}
                         alt="OracleDb logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-20 h-20 object-contain"
+                        width={80}
+                        height={80}
                       />
-                      <p className="text-center mt-2">Oracle database</p>
+                      <p className="text-center  text-sm">Oracle DB</p>
                     </div>
 
-                    <div className="w-1/5 flex flex-col items-center">
+                    {/* MongoDB Logo */}
+                    <div className="flex flex-col items-center">
                       <Image
                         src={mongoDb}
                         alt="mongoDb logo"
-                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-                        width={90}
-                        height={90}
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-20 h-20 object-contain"
+                        width={80}
+                        height={80}
                       />
-                      <p className="text-center mt-2">mongoDb</p>
+                      <p className="text-center text-sm">MongoDB</p>
                     </div>
+                  </div>
 
-                    <div className="">
-                      <a
-                        href="https://github.com/JianRong-King/Paris-Arrow-Transit-Database-System"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-                      >
-                        <span>Git Repo</span>
-                        <FaGithub size={40} />
-                      </a>
-                    </div>
+                  {/* GitHub Repo Button */}
+                  <div className="flex flex-col items-center mt-4 mb-6">
+                    <a
+                      href="https://github.com/JianRong-King/Paris-Arrow-Transit-Database-System"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
                   </div>
                 </div>
               </div>
