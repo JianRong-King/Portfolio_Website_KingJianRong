@@ -48,8 +48,8 @@ Portfolio_Website_KingJianRong/
 ├── app
 ├── assets (Logo for my projects & tech stack image)
 ├── components (Each section's div)
-  ├── Achievement.tsx
-  ├── Contact.tsx
+  └── Achievement.tsx
+  └── Contact.tsx
   └── Footer.tsx
   └── Hero.tsx
   └── KeyMetrics.tsx
