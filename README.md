@@ -45,17 +45,21 @@ This portfolio serves as a digital resume, presenting my background, projects, a
 ## 📁 File Structure
 ```
 Portfolio_Website_KingJianRong/
-├── index.html # Main entry point
-├── css/
-│ └── styles.css # Main stylesheet
-├── js/
-│ └── main.js # Core interactivity script
-├── assets/
-│ ├── images/ # Project images, profile photo
-│ ├── icons/ # UI icons
-│ └── [other assets] # Fonts, videos, etc.
-├── README.md # Project documentation
-└── [other files/folders] # e.g., favicon.ico, data.json
+├── app
+├── assets (Logo for my projects & tech stack image)
+├── components (Each section's div)
+  ├── Achievement.tsx
+  ├── Contact.tsx
+  └── Footer.tsx
+  └── Hero.tsx
+  └── KeyMetrics.tsx
+  └── LogoAnimation.tsx
+  └── Navbar.tsx
+  └── Portfolio.tsx
+  └── Stack.tsx
+├── public...
+├── README.md
+...
 ```
 
 ## 📬 Contact
