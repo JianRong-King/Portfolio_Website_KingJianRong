@@ -5,7 +5,7 @@ import Image from "next/image";
 import guitar_hero_pic from "@/assets/guitarhero.gif";
 import nutriTrack from "@/assets/NutriTrack.png";
 import parisUML from "@/assets/paris_db.png";
-import santorini from "@/assets/Santorni_png.png";
+import santorini from "@/assets/santorini.gif";
 
 import typeScriptLogo from "@/assets/typescript.png";
 import rxJsLogo from "@/assets/RxJs_Logo.png";
@@ -23,11 +23,15 @@ import framer_motion_logo from "@/assets/framer-motion.png";
 
 import mongoDb from "@/assets/mongo_db.png";
 import OracleDb from "@/assets/oracle_db_logo.png";
+import todoList from "@/assets/todo_list.png";
 
 import { FaGithub } from "react-icons/fa";
 import cssLogo from "@/assets/css-3-seeklogo.png";
 import htmlLogo from "@/assets/html_logo.png";
 import nextJsLogo from "@/assets/nextjs_logo.png";
+import nodejs_logo from "@/assets/nodejs_logo.png";
+import expressJs from "@/assets/Express_logo.png";
+import postgre from "@/assets/PostgreSQL-Logo.wine.png";
 
 import { motion } from "framer-motion";
 
@@ -80,6 +84,15 @@ const projects = [
     description:
       "Developed a responsive and interactive portfolio using Next.js, TypeScript, and Tailwind CSS, showcasing personal projects, technical skills, and experience. ",
     image: porfolio_img,
+    Tools: [],
+    Skills: [],
+  },
+  {
+    id: 6,
+    year: 2025,
+    title: "Full-Stack Todo-List Website",
+    description: "",
+    image: todoList,
     Tools: [],
     Skills: [],
   },
@@ -504,7 +517,7 @@ export const Portfolio = () => {
         </motion.div>
 
         <motion.div
-          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl"
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center justify-center "
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -617,7 +630,7 @@ export const Portfolio = () => {
         </motion.div>
 
         <motion.div
-          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl"
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center justify-center "
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -706,6 +719,146 @@ export const Portfolio = () => {
           <Image
             src={projects[3].image}
             alt={projects[3].title}
+            className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+            width={800}
+            height={450}
+          />
+        </motion.div>
+
+        <motion.div
+          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-2 bg-slate-900 rounded-2xl items-center justify-center "
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="items-center justify-center mr-4 pl-4 pt-4">
+            <div className="flex ">
+              <div>
+                <p className="text-gray-400 text-lg mb-2">{projects[5].year}</p>
+
+                <div className="flex gap-3 mb-2">
+                  <h3
+                    className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors`}
+                  >
+                    {projects[5].title}
+                  </h3>
+                  <h4 className="flex gap-3 text-xs mt-1 font-light antialiased flex-start">
+                    {projects[5].Tools.map((tool) => (
+                      <div
+                        key={tool}
+                        className="box-content"
+                      >
+                        <div className="p-1 pr-1 border-2 rounded-full">
+                          {tool}
+                        </div>
+                      </div>
+                    ))}
+                    <div className="h-7 border-l-2 border-gray-400"></div>
+                    {projects[5].Skills.map((skill) => (
+                      <div
+                        key={skill}
+                        className="box-content"
+                      >
+                        <div className="p-1 border-2 rounded-full">{skill}</div>
+                      </div>
+                    ))}
+                  </h4>
+                </div>
+
+                <p className="leading-7 text-justify text-gray-400 transition-all duration-500 ease-in-out">
+                  <ul className="list-disc ml-6">
+                    <li>
+                      Developed a full-stack task management app with a
+                      responsive React frontend and an Express.js backend
+                      simulating real-world API interactions.
+                    </li>
+                    <li>
+                      Designed and implemented RESTful API endpoints (GET, POST,
+                      PUT, PATCH, DELETE) to support core task
+                      operations—creating, updating, completing, and deleting
+                      todos.
+                    </li>
+                    <li>
+                      Integrated a local PostgreSQL database for persistent task
+                      storage and modeled schema for efficient querying.
+                    </li>
+                    <li>
+                      Applied modular routing, middleware handling, and CRUD
+                      controller design for maintainable backend architecture.
+                    </li>
+                  </ul>
+                </p>
+
+                <div className="mt-4 ml-2">
+                  <div className="grid grid-cols-4 gap-4 items-center justify-items-center mb-4">
+                    {/* Java Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={react_logo}
+                        alt="Java Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">Java</p>
+                    </div>
+
+                    {/* Java Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={nodejs_logo}
+                        alt="nodejs_logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-16 h-16 object-contain"
+                        width={64}
+                        height={64}
+                      />
+                      <p className="text-center mt-2 text-sm">Node JS </p>
+                    </div>
+
+                    {/* Java Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={expressJs}
+                        alt="expressJs Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-25 h-16 object-contain"
+                        width={90}
+                        height={90}
+                      />
+                      <p className="text-center mt-2 text-sm">ExpressJs</p>
+                    </div>
+
+                    {/* Java Logo */}
+                    <div className="flex flex-col items-center w-full">
+                      <Image
+                        src={postgre}
+                        alt="postgre Logo"
+                        className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out w-25 h-16 object-contain"
+                        width={90}
+                        height={90}
+                      />
+                      <p className="text-center mt-2 text-sm">PostgreSQL</p>
+                    </div>
+                  </div>
+
+                  {/* GitHub Link */}
+                  <div className="flex flex-col items-center w-full mb-8">
+                    <a
+                      href="https://github.com/JianRong-King/Pragmatic-Todo-List"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                    >
+                      <span>Git Repo</span>
+                      <FaGithub size={24} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Image
+            src={projects[5].image}
+            alt={projects[5].title}
             className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
             width={800}
             height={450}
