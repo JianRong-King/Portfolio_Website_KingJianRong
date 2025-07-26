@@ -14,7 +14,7 @@ const Experience = [
 
 export const Achievement = () => {
   return (
-    <section className="text-white py-20">
+    <section className="text-white py-20 bg-black">
       <div className="container mx-auto flex flex-col md:flex-row">
         <div className="md:w-1/4 pr-8 mr-10 mb-12 md:mb-0">
           <h2 className="text-5xl text-purple-300 sticky top-20 font-serif font-bold">

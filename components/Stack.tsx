@@ -17,21 +17,21 @@ const stackItems = [
 export const Stack = () => {
   return (
     <section
-      className="py-16 glass scroll-mt-20"
+      className="py-16 bg-black scroll-mt-20 "
       id="TechStack"
     >
-      <div className="max-w-[1200px] mx-auto px-4 text-center">
+      <div className="max-w-[1200px] mx-auto px-4 text-center bg-black">
         <h2 className="text-5xl text-gray-200 font-bold mb-4">
           Tech Stack & <span className="text-purple-400">Tools</span>
         </h2>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 bg-black">
           {stackItems.map((item) => (
             <div
               key={item.id}
               className="flex items-center justify-center flex-col rounded-xl p-4"
             >
-              <div className="mb-4 bg-white/10 p-6 rounded-xl">
+              <div className="mb-4 bg-white/10 p-6 rounded-xl ">
                 {React.createElement(item.icon, {
                   className: "w-32 h-32",
                   style: { color: item.color },

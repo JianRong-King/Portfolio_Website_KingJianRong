@@ -102,7 +102,7 @@ export const Portfolio = () => {
   return (
     <section
       id="Projects"
-      className="py-28 text-white"
+      className="py-28 text-white bg-black"
     >
       <div className="flex max-w-7xl mx-auto px-2">
         <h2 className="text-5xl font-bold mb-4">
